@@ -1,0 +1,11 @@
+URxvt.font: xft:monospace:size=12
+URxvt.scrollBar: false
+
+! Background color
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/0800
+
+! Font color
+URxvt*foreground: white
+
+URxvt.perl-ext-common: resize-font
