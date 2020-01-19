@@ -30,15 +30,14 @@ resetColor=$(tput sgr0)
 #PS1='[\u@\h \W]\$\n'
 
 # Colored custom prompt
-PS1='${bold}${red}\[\u\] '			# username
-PS1+='${white}\[at\] '
-PS1+='${seagreen2}\[\h\] '			# hostname
-PS1+='${white}\[in\] '
-PS1+='${aqua}\[\w\] '				# working directory
-PS1+='${grey}\[$(__git_ps1 "(%s)")\] ' 		# git prompt
-PS1+='\[\n\]'					# new line
-PS1+='${blue}${bold}\[$\] '
-PS1+='${resetColor}'				# reset color
+PS1='\[${bold}${red}\]\u '			# username
+PS1+='\[${white}\]at '
+PS1+='\[${seagreen2}\]\h '			# hostname
+PS1+='\[${white}\]in '
+PS1+='\[${aqua}\]\w '				# working directory
+PS1+='\[${grey}$(__git_ps1 "(%s)")\]' 		# git prompt
+PS1+='\n'					# new line
+PS1+='\[${blue}${bold}\]\$ \[${resetColor}\]'
 
 export PS1
 
