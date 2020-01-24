@@ -15,6 +15,18 @@ xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 # using dwm as widow manager
 #exec dwm
 
-while :; do
+while true; do
+	while true; do
+		LOCALTIME=$( date )
+		MEM=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
+    	NET=$(nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d : -f2)
+		BAT="Bat:$(cat /sys/class/power_supply/BAT0/capacity) Status:$(cat /sys/class/power_supply/BAT0/status)"
+    	xsetroot -name "$LOCALTIME | Mem:$MEM | Net: $NET | $BAT |"
+
+   		sleep 10s
+	done &
 	dwm 2> ~/.dwm.log
 done
+
+
+
