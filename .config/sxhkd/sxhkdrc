@@ -11,5 +11,5 @@ XF86MonBrightness{Up,Down}
 	xbacklight {-inc,-dec} 10
 
 # Open file manager
-super + e
-	$TERM -e ranger
+super + shift + e
+	st -e ranger
