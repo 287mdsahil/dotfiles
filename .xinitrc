@@ -24,7 +24,7 @@ while true; do
 		MEM=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
     	NET=$(nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d : -f2)
 		BAT="Bat:$(cat /sys/class/power_supply/BAT0/capacity) Status:$(cat /sys/class/power_supply/BAT0/status)"
-    	xsetroot -name "$LOCALTIME | Mem:$MEM | Net: $NET | $BAT |"
+    	xsetroot -name "| $LOCALTIME | Mem:$MEM | Net: $NET | $BAT |"
 
    		sleep 10s
 	done &

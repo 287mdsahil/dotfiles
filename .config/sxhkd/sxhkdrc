@@ -13,3 +13,7 @@ XF86MonBrightness{Up,Down}
 # Open file manager
 super + shift + e
 	st -e ranger
+
+# Lock desktop
+super + shift + x
+	slock
