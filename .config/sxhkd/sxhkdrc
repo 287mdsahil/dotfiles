@@ -14,6 +14,10 @@ XF86MonBrightness{Up,Down}
 super + shift + e
 	st -e ranger
 
+# Open browser
+super + shift + b
+	surf duckduckgo.com
+
 # Lock desktop
 super + shift + x
 	slock

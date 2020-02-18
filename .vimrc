@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 	Plug 'airblade/vim-gitgutter'
 	Plug 'vim-airline/vim-airline'
+	Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 call plug#end()
 " End of plugin manager
@@ -19,7 +20,7 @@ call plug#end()
 " ycm compilation database
 let g:ycm_global_ycm_extra_conf = '/home/sahil/.vim/plugged/youcompleteme/third_party/ycmd/.ycm_extra_conf.py'
 " Set color scheme
-colorscheme tender
+colorscheme native
 
 " Map nerd tree to ctrl+n
 map <C-n> :NERDTree
@@ -42,5 +43,7 @@ let g:syntastic_check_on_wq = 0
 set mouse=a
 
 " tab
-set shiftwidth=0
-set tabstop=4
+"set shiftwidth=0
+"set tabstop=4
+
+let g:livepreview_previewer = 'zathura'
