@@ -10,6 +10,10 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 XF86MonBrightness{Up,Down}
 	xbacklight {-inc,-dec} 10
 
+# dmenu
+super + p
+	dmenu_run -c -l 20
+
 # Open file manager
 super + shift + e
 	st -e ranger
