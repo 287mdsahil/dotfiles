@@ -42,7 +42,4 @@ PS1+='\[${blue}${bold}\]\$ \[${resetColor}\]'
 export PS1
 
 # Alias for managing dot files
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-# Executing the neofetch command
-neofetch
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
