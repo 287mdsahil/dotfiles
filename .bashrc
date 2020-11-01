@@ -30,19 +30,16 @@ resetColor=$(tput sgr0)
 #PS1='[\u@\h \W]\$\n'
 
 # Colored custom prompt
-PS1='\[${bold}${red}\]\u '			# username
+PS1='\[${bold}${red}\]\u '                      # username
 PS1+='\[${white}\]at '
-PS1+='\[${seagreen2}\]\h '			# hostname
+PS1+='\[${seagreen2}\]\h '                      # hostname
 PS1+='\[${white}\]in '
-PS1+='\[${aqua}\]\w '				# working directory
-PS1+='\[${grey}$(__git_ps1 "(%s)")\]' 		# git prompt
-PS1+='\n'					# new line
+PS1+='\[${aqua}\]\w '                           # working directory
+PS1+='\[${grey}$(__git_ps1 "(%s)")\]'           # git prompt
+PS1+='\n'                                       # new line
 PS1+='\[${blue}${bold}\]\$ \[${resetColor}\]'
 
 export PS1
 
 # Alias for managing dot files
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-# Executing the neofetch command
-neofetch
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
