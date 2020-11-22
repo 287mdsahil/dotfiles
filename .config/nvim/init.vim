@@ -1,16 +1,17 @@
 " Plugin Manager
 " ----------------------------------------------------------------------
 " Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob('~/.local/share/nvim/autoload/plug.vim'))
+  silent !sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'scrooloose/nerdtree'
     Plug 'flazz/vim-colorschemes'   
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -19,8 +20,20 @@ call plug#end()
 "" NERDTree-------------------------------------------------------------
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
-"" Latex-Live-Preivew--------------------------------------------------
+"" Latex-Live-Preivew---------------------------------------------------
 let g:livepreview_previewer = 'zathura'
+
+"" Airline--------------------------------------------------------------
+" enable/disable coc integration
+let g:airline#extensions#coc#enabled = 1
+" change error symbol:
+let airline#extensions#coc#error_symbol = 'E:'
+" change warning symbol:
+let airline#extensions#coc#warning_symbol = 'W:'
+" change error format:
+let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
+"  change warning format: 
+let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
 
 "" Coc------------------------------------------------------------------
 " TextEdit might fail if hidden is not set.
