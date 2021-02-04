@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Enable tap to click on touchpad (device id:12 tapping prop: 312)
-xinput set-prop 12 312 1
+xinput set-prop 12 340 1
 # Enable natural scrollig (device id:12 natural Scrolling prop:320)
-xinput set-prop 12 320 1
+xinput set-prop 12 348 1
 
 # Start sxhkd
 sxhkd &
