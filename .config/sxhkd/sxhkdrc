@@ -1,0 +1,23 @@
+# Media controls
+XF86Audio{Play,Next,Prev}
+	playerctl {play-pause,next,previous}
+
+# Audio volume controls
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+	amixer set Master {5%+,5%-,toggle}
+
+# Screen brightness controls
+XF86MonBrightness{Up,Down}
+	xbacklight {-inc,-dec} 10
+
+# Open file manager
+super + shift + e
+	$TERMINAL -e ranger
+
+# Open browser
+super + shift + b
+	$BROWSER
+
+# Lock desktop
+super + shift + x
+	slock
