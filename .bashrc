@@ -43,3 +43,7 @@ export PS1
 
 # Alias for managing dot files
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
+
+export EDITOR=nvim
+export TERMINAL=alacritty
+export BROWSER=firefox

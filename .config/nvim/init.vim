@@ -9,9 +9,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'scrooloose/nerdtree'
     Plug 'flazz/vim-colorschemes'   
-    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+    Plug 'xuhdev/vim-latex-live-preview'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'ciaranm/detectindent'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'lervag/vimtex'
 call plug#end()
 
 
@@ -201,7 +205,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " ----------------------------------------------------------------------
 "" Encoding
 set encoding=utf-8
-set fileencoding=utf-8
+""set fileencoding=utf-8
 set fileencodings=utf-8
 set ttyfast
 

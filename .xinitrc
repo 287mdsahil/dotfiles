@@ -8,6 +8,8 @@ xinput set-prop 12 348 1
 # Start sxhkd
 sxhkd &
 
+# Enable wallpaper
+~/.fehbg
 
 while true; do
 	while true; do
