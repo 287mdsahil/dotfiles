@@ -18,6 +18,9 @@ call plug#begin('~/.config/nvim/plugged')
     " File explorer
     Plug 'kyazdani42/nvim-tree.lua'
 
+    " Themes
+    Plug 'morhetz/gruvbox'
+
 call plug#end()
 
 

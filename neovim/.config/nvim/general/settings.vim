@@ -28,6 +28,7 @@ set cursorline                          " Enable highlighting of the current lin
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+colorscheme gruvbox
 
 " Searching
 set incsearch                           " Incremental searching
@@ -45,3 +46,4 @@ set undofile                            " Undo history per file
 " Timings
 set updatetime=50                       " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
+
