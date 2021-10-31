@@ -11,6 +11,16 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 
 call plug#begin('~/.config/nvim/plugged')
+
+    " icon support
+    Plug 'kyazdani42/nvim-web-devicons'
+
+    " File explorer
+    Plug 'kyazdani42/nvim-tree.lua'
+
 call plug#end()
+
+
+source $HOME/.config/nvim/plugins/nvim-tree.vim
 
 
