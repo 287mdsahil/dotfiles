@@ -33,6 +33,15 @@ require'nvim-tree'.setup {
     enable      = true,
     update_cwd  = false,
   },
+  diagnostics = {
+    enable = true,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    }
+  },
   view = {
     width = 30,
     height = 30,
