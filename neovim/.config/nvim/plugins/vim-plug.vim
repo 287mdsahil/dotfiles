@@ -21,9 +21,14 @@ call plug#begin('~/.config/nvim/plugged')
     " Themes
     Plug 'morhetz/gruvbox'
 
-    " Lsp support
+    " Lsp support and completion
     Plug 'neovim/nvim-lspconfig'
     Plug 'williamboman/nvim-lsp-installer'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'
 
 
 call plug#end()
@@ -31,4 +36,3 @@ call plug#end()
 
 source $HOME/.config/nvim/plugins/nvim-tree.vim
 source $HOME/.config/nvim/plugins/nvim-lspconfig.vim
-
