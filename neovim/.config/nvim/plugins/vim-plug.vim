@@ -33,11 +33,14 @@ call plug#begin('~/.config/nvim/plugged')
     " Snipped engine
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
+
+    " Statusline & tabline
+    Plug 'nvim-lualine/lualine.nvim'
+    Plug 'kdheepak/tabline.nvim'
  
-
-
 call plug#end()
 
 
 source $HOME/.config/nvim/plugins/nvim-tree.vim
 source $HOME/.config/nvim/plugins/nvim-lspconfig.vim
+source $HOME/.config/nvim/plugins/nvim-lualine.vim

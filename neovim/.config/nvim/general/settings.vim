@@ -20,7 +20,6 @@ set autoindent                          " Good auto indent
 " Visual
 set nowrap                              " Display long lines as just one line
 set ruler              			        " Show the cursor position all the time
-set laststatus=0                        " Always display the status line
 set termguicolors                       " Enables 24-bit RGB color
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
