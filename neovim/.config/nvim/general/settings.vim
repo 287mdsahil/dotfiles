@@ -1,7 +1,6 @@
 " General
 syntax enable                           " Enables syntax highlighing
 set encoding=utf-8                      " The encoding displayed
-set fileencoding=utf-8                  " The encoding written to file
 set mouse=a                             " Enable your mouse
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 
