@@ -11,6 +11,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 
 call plug#begin('~/.config/nvim/plugged')
+    Plug 'nvim-lua/plenary.nvim'
 
     " icon support
     Plug 'kyazdani42/nvim-web-devicons'
@@ -37,6 +38,11 @@ call plug#begin('~/.config/nvim/plugged')
     " Statusline & tabline
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'kdheepak/tabline.nvim'
+
+    " Git
+    Plug 'lewis6991/gitsigns.nvim'
+    Plug 'tpope/vim-fugitive'
+
  
 call plug#end()
 
@@ -44,3 +50,5 @@ call plug#end()
 source $HOME/.config/nvim/plugins/nvim-tree.vim
 source $HOME/.config/nvim/plugins/nvim-lspconfig.vim
 source $HOME/.config/nvim/plugins/nvim-lualine.vim
+
+lua require('gitsigns').setup()
