@@ -43,11 +43,20 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'lewis6991/gitsigns.nvim'
     Plug 'tpope/vim-fugitive'
 
+    " Treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+    " Telescope
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
 call plug#end()
 
 
 source $HOME/.config/nvim/plugins/nvim-tree.vim
 source $HOME/.config/nvim/plugins/nvim-lspconfig.vim
+source $HOME/.config/nvim/plugins/nvim-treesitter.vim
+source $HOME/.config/nvim/plugins/telescope.vim
 
 lua require('lualine').setup {}
 lua require('gitsigns').setup()
