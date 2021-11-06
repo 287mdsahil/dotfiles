@@ -57,6 +57,7 @@ source $HOME/.config/nvim/plugins/nvim-tree.vim
 source $HOME/.config/nvim/plugins/nvim-lspconfig.vim
 source $HOME/.config/nvim/plugins/nvim-treesitter.vim
 source $HOME/.config/nvim/plugins/telescope.vim
+source $HOME/.config/nvim/plugins/barbar.vim
 
 lua require('lualine').setup {}
 lua require('gitsigns').setup()
