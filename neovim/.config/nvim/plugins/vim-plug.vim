@@ -37,18 +37,17 @@ call plug#begin('~/.config/nvim/plugged')
 
     " Statusline & tabline
     Plug 'nvim-lualine/lualine.nvim'
-    Plug 'kdheepak/tabline.nvim'
+    Plug 'romgrk/barbar.nvim'
 
     " Git
     Plug 'lewis6991/gitsigns.nvim'
     Plug 'tpope/vim-fugitive'
 
- 
 call plug#end()
 
 
 source $HOME/.config/nvim/plugins/nvim-tree.vim
 source $HOME/.config/nvim/plugins/nvim-lspconfig.vim
-source $HOME/.config/nvim/plugins/nvim-lualine.vim
 
+lua require('lualine').setup {}
 lua require('gitsigns').setup()
